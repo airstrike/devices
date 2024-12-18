@@ -37,7 +37,7 @@ pub enum Screen {
     },
 }
 
-// simulate some slow loading of users and return a Result<Vec<String>, String>
+// simulate some slow loading of profiles and return a Result<Vec<String>, String>
 async fn load_profiles() -> Result<model::Model, String> {
     tokio::time::sleep(std::time::Duration::from_secs(3)).await;
     Ok(model::Model::default())
